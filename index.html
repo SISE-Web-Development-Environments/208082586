@@ -161,38 +161,49 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <h1 class="header"><span>Contact Me</span></h1>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<form action="mailto:nivgold@post.bgu.ac.il" method="post" enctype="text/plain">
-  <label>Email Address</label>
-  <br>
-  <input type="email" placeholder="example@domain.com" name="email" required size="30">
-  <br>
+<form method="post" enctype="text/plain">
   <label>Subject</label>
   <br>
-  <input type="text" placeholder="Subject" name="subject" required>
+  <input id="subject" type="text" placeholder="Subject" name="subject" required>
   <br>
   <label>Message</label>
   <br>
-  <textarea cols="50" rows="10" placeholder="write a message to Squidward" name="message" required></textarea>
+  <textarea id="message" cols="50" rows="10" placeholder="write a message to Squidward" name="message" required></textarea>
   <br>
-  <p>😀😁😂😍😘😒😖😜😝😠😡😢😭😱😎</p>
+  <p>
+    <span id=":)" onclick="addEmoji(':)')">😀</span>
+    <span id=":D" onclick="addEmoji(':D')">😁</span>
+    <span id=";)" onclick="addEmoji(';)')">😂</span>
+    <span id=">3" onclick="addEmoji('>3')">😍</span>
+    <span id="kiss" onclick="addEmoji('kiss')">😘</span>
+    <span id="-_-" onclick="addEmoji('-_-')">😒</span>
+    <span id="~_~" onclick="addEmoji('~_~')">😖</span>
+    <span id=":p" onclick="addEmoji(':p')">😜</span>
+    <span id=";p" onclick="addEmoji(';p')">😝</span>
+    <span id="mad" onclick="addEmoji('mad')">😠</span>
+    <span id="mad2" onclick="addEmoji('mad2')">😡</span>
+    <span id="sad" onclick="addEmoji('sad')">😢</span>
+    <span id="sad2" onclick="addEmoji('sad2')">😭</span>
+    <span id="O_O" onclick="addEmoji('O_O')">😱</span>
+    <span id="cool" onclick="addEmoji('cool')">😎</span>
+  </p>
   <br>
-  <input type="submit" value="Submit">
+  <input onclick="sendEmail()" type="submit" value="Submit">
   <input type="reset" value="Reset">
+  <script>
+    function addEmoji(elemID){
+      document.getElementById("message").value += document.getElementById(elemID).innerHTML;
+    }
+  </script>
+  <script>
+    function sendEmail() {
+      location.href = "mailto:nivgold@post.bgu.ac.il?subject=" + document.getElementById("subject").value +"&body=" + document.getElementById("message").value;
+      event.preventDefault()
+    }
+  </script>
 </form>
 </section>
 
