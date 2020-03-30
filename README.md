@@ -1,8 +1,8 @@
 ## Notes
 hope that you will love the first site that i built :)
 
-the site is on a very special characters in our world
-* maybe some of the contents and the features won't work in any other browser than Chrome
+the site is on a very special character in our world
+* maybe some of the contents and features won't work in any other browser than Chrome
 
 ## Details
 * ID: 208082586
