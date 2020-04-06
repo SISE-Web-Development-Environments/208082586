@@ -9,4 +9,5 @@ the site is on a very special character in our world
 * Name: Niv Goldshlager
 * Github Username: nivgold
 ###### URL
-https://sise-web-development-environments.github.io/208082586/
+my site: https://sise-web-development-environments.github.io/208082586/
+grandmother site: https://nivgold.github.io/Ada_Gadisman/
